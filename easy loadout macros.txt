@@ -1,0 +1,93 @@
+AI ONLY - scaled for RHS RPG backpack, can +1 for CUP RPG backpack
+
+// AT
+#define AT "CUP_launch_RPG7V"
+#define AT_MAG "CUP_PG7V_M:2","CUP_OG7_M:1"
+
+// MAT
+#define MAT "CUP_launch_RPG7V"
+#define MAT_MAG "CUP_PG7VL_M:2","CUP_OG7_M:1"
+#define MAG_MAG2 "CUP_PG7VL_M:1","CUP_OG7_M:3"
+#define MAT_OPTIC "CUP_optic_PGO7V3"
+
+PLAYER ONLY - without scope (simplified sights), scaled for RHS RPG backpack, can +1 for CUP RPG backpack
+
+// AT
+#define AT "APEX_RPG7_v2"
+#define AT_MAG "RPG7_F:2","M_OG7V:2"
+
+// MAT
+#define MAT "APEX_RPG7_v2"
+#define MAT_MAG "M_PG7VL:2","M_OG7V:2"
+#define MAT_OPTIC "optic_PGO7V3"
+
+OR
+
+// AT
+#define AT "CUP_launch_RPG7V"
+#define AT_MAG "rhs_rpg7_PG7VM_mag:2","rhs_rpg7_OG7V_mag:2"
+
+// MAT
+#define MAT "CUP_launch_RPG7V"
+#define MAT_MAG "rhs_rpg7_PG7VL_mag:2","rhs_rpg7_OG7V_mag:2"
+#define MAT_MAG2 "rhs_rpg7_PG7VL_mag:1","rhs_rpg7_OG7V_mag:2"
+#define MAT_OPTIC "CUP_optic_PGO7V3"
+
+// MAT - BLUFOR MAAWS
+#define MAT "launch_MRAWS_green_F"
+#define MAT_MAG "MRAWS_HEAT55_F:2","MRAWS_HE_F:1","MAA_MAAWS_SMOKE469:2","MAA_MAAWS_ILLUM545:1"
+#define MAT_MAG2 "MRAWS_HEAT55_F:2","MRAWS_HE_F:1","MAA_MAAWS_SMOKE469:1","MAA_MAAWS_ILLUM545:2"
+#define MAT_MAG3 "MRAWS_HEAT55_F:1","MRAWS_HE_F:1"
+#define MAT_OPTIC "CUP_acc_ANPEQ_15"
+
+// MAT
+#define MAT "CUP_launch_Metis"
+#define MAT_MAG "CUP_AT13_M:2"
+#define MAT_OPTIC 
+
+// HMG - DSHKM
+#define HMG "CUP_DSHKM_carry" OR "ace_compat_sog_dshkm_carry"
+#define HMG_TRI_HI "ace_csw_kordCarryTripod"
+#define HMG_TRI_LO "ace_csw_kordCarryTripodLow"
+#define HMG_MAG "ace_csw_50Rnd_127x108_mag:4"
+
+// HMG - NSV (1985)
+#define HMG "ace_compat_rhs_afrf3_nsv_carry"
+#define HMG_TRI_HI "ace_csw_kordCarryTripod"
+#define HMG_TRI_LO "ace_csw_kordCarryTripodLow"
+#define HMG_MAG "ace_csw_50Rnd_127x108_mag:4"
+
+// HMG - KORD (1999)
+#define HMG "CUP_KORD_carry"
+#define HMG_TRI_HI "ace_csw_kordCarryTripod"
+#define HMG_TRI_LO "ace_csw_kordCarryTripod"
+#define HMG_MAG "ace_csw_50Rnd_127x108_mag:5"
+
+// HMG - M2
+#define HMG "CUP_m2_carry"
+#define HMG_TRI_HI "ace_csw_m3CarryTripod"
+#define HMG_TRI_LO "ace_csw_m3CarryTripod"
+#define HMG_MAG "ace_csw_100Rnd_127x99_mag_red:3"
+
+// HAT
+#define HAT "ace_compat_rhs_afrf3_spg9m_carry"
+#define HAT_TRI "ace_csw_spg9CarryTripod"
+#define HAT_MAG "ace_compat_rhs_afrf3_mag_PG9V:2", "ace_compat_rhs_afrf3_mag_OG9V:1"
+
+USABLE BY ALL
+
+// SAM - FIM-43 Redeye (1967)
+#define SAM "cwr3_launch_redeye"
+#define SAM_MAG 
+
+// SAM - FIM-92 Stinger (1981)
+#define SAM "CUP_launch_FIM92Stinger"
+#define SAM_MAG 
+
+// SAM - 9K32 Strela (1970)
+#define SAM "vn_sa7b"
+#define SAM_MAG "vn_sa7b_mag"
+
+// SAM - 9K38 Igla (1981)
+#define SAM "CUP_launch_Igla"
+#define SAM_MAG 
