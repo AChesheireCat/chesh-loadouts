@@ -7,7 +7,7 @@ description = "German Erweiterter Grundbefähigung (EGB) Infantry c. 2024";
 
 // Camo set
 #define CAMO_UNIFORM "CUP_U_B_GER_Flecktarn_1","CUP_U_B_GER_Flecktarn_2","CUP_U_B_GER_Flecktarn_3","CUP_U_B_GER_Flecktarn_4","CUP_U_B_GER_Flecktarn_5","CUP_U_B_GER_Flecktarn_6","CUP_U_B_GER_Flecktarn_7","CUP_U_B_GER_Fleck_Crye","CUP_U_B_GER_Fleck_Crye2","CUP_U_B_GER_Fleck_Crye","CUP_U_B_GER_Fleck_Crye2"
-#define CAMO_VEST "CUP_V_B_Armatus_BB_OD"
+#define CAMO_VEST "V_thor_r_rgr","V_thor_r2_rgr","V_thor_rgr"
 #define CAMO_BACKPACK "B_Battle_Belt_F","B_Battle_Belt_F","B_tweed_pack_wasser_molle_od7","B_tweed_pack_wasser_molle_od7_alt"
 #define CARRYALL "gm_ge_army_backpack_90_flk"
 #define CAMO_HEADGEAR "CUP_H_OpsCore_Covered_Fleck"
@@ -104,11 +104,11 @@ description = "German Erweiterter Grundbefähigung (EGB) Infantry c. 2024";
 // -------------------- PASTE ABOVE THIS LINE
 //Custom Defines
 #define CAMO_VEST_AR CAMO_VEST
-#define CAMO_VEST_FTL CAMO_VEST
-#define CAMO_VEST_SL CAMO_VEST
+#define CAMO_VEST_FTL "V_thor_tl_rgr","V_thor_sl_rgr"
+#define CAMO_VEST_SL CAMO_VEST_FTL
 #define CAMO_VEST_MEDIC CAMO_VEST
 #define CAMO_BACKPACK_LAT CAMO_BACKPACK
-#define CAMO_BACKPACK_AR "B_Battle_Belt_XL_F"
+#define CAMO_BACKPACK_AR "B_TacticalPack_blk"
 #define CAMO_BACKPACK_FTL CAMO_BACKPACK
 #define CAMO_BACKPACK_SL "CUP_B_GER_Pack_Flecktarn"
 #define CAMO_BACKPACK_MEDIC CARRYALL

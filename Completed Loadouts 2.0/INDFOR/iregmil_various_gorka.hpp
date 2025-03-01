@@ -175,7 +175,7 @@ class ftl: rifleman {// FTL
   backpack[] = {CAMO_BACKPACK_FTL};
   weapons[] = {GLRIFLE2};
   magazines[] = {GLRIFLE2_MAG,GLRIFLE2_MAG_HE,GLRIFLE2_MAG_SMOKE,LEADER_GRENADES};
-  items[] += {LEADER_TOOLS,"acex_intelitems_notepad"};
+  items[] += {LEADER_TOOLS};
   linkedItems[] += {LEADER_LINKED,BINOS};
 };
 class sl: ftl {// SL

@@ -1,5 +1,5 @@
 author = "AChesheireCat";
-description = "British Armed Forces c. 2023 - includes Light AT (M72A7) and DMR defines.";
+description = "British Armed Forces c. 2023 - includes Light AT (M72A7) and DMR defines. (Last updated: 2025/02/28)";
 #include "undef.hpp" // Reset defines
 
 // ------------------- PASTE BELOW THIS LINE
@@ -10,7 +10,7 @@ description = "British Armed Forces c. 2023 - includes Light AT (M72A7) and DMR 
 #define CAMO_VEST "CUP_V_B_BAF_MTP_Osprey_Mk4_Rifleman"
 #define CAMO_BACKPACK "B_Battle_Belt_F"
 #define CARRYALL "CUP_B_Motherlode_MTP"
-#define CAMO_HEADGEAR "CUP_H_OpsCore_Covered_MTP_SF","CUP_H_OpsCore_Covered_MTP"  //"acp_US_OCP_core_lite_H_HelmetB_US_OCP" 
+#define CAMO_HEADGEAR "CUP_H_OpsCore_Covered_MTP_SF","CUP_H_OpsCore_Covered_MTP"  //"H_HelmetB_grass" 
 #define CAMO_HEADGEAR_SPECIAL "H_Watchcap_blk"
 //Pilot camo Set
 #define CAMO_UNIFORM_PILOT "CUP_U_B_USArmy_PilotOverall"
@@ -27,13 +27,14 @@ description = "British Armed Forces c. 2023 - includes Light AT (M72A7) and DMR 
 #define RIFLE_MAG "hlc_30rnd_556x45_M_PMAG:7","hlc_30rnd_556x45_t_PMAG:3"
 #define RIFLE_ATTACHMENTS "CUP_optic_Eotech553_Black","CUP_acc_LLM_od"
 #define AAR_ATTACHMENTS RIFLE_ATTACHMENTS
-#define ALT_OPTICS "ptv_eot552","ptv_rmr"
+#define ALT_OPTICS "ptv_eot552","ptv_rmr","ptv_t1"
 #define MAG_OPTICS "CUP_optic_Elcan_reflex","CUP_optic_Elcan","CUP_optic_SUSAT"
 // GL Rifle
 #define GLRIFLE "CUP_arifle_L85A2_GL"
 #define GLRIFLE_MAG RIFLE_MAG
 #define GLRIFLE_MAG_SMOKE "1Rnd_Smoke_Grenade_shell:2","1Rnd_SmokeRed_Grenade_shell:2"
-#define GLRIFLE_MAG_HE "CUP_1Rnd_HEDP_M203:5"
+#define GLRIFLE_MAG_HE "1Rnd_HE_Grenade_shell:5"
+#define GLRIFLE_MAG_HEDP "potato_1Rnd_40mm_M433_HEDP:5"
 #define GLRIFLE_MAG_FLARE "UGL_FlareGreen_F:4"
 #define GLRIFLE_MAG_ILLUM "CUP_1Rnd_StarFlare_White_M203:4"
 // Carbine
@@ -42,6 +43,9 @@ description = "British Armed Forces c. 2023 - includes Light AT (M72A7) and DMR 
 // AR
 #define AR "CUP_lmg_L7A2"
 #define AR_MAG "hlc_100Rnd_762x51_Barrier_M60E4:4"
+// LAR
+#define LAR "CUP_lmg_L110A1"
+#define LAR_MAG "CUP_200Rnd_TE4_Red_Tracer_556x45_L110A1:2"
 // Light AT - replace with MATADOR if ever added
 #define LAT "ptv_m72a7"
 #define LAT_MAG 
@@ -95,8 +99,8 @@ description = "British Armed Forces c. 2023 - includes Light AT (M72A7) and DMR 
 // Gear
 #define TOOLS WEST_TOOLS
 #define LEADER_TOOLS BASE_LEADER_TOOLS,SIDE_KEY
-#define LINKED BASE_LINKED,"CUP_NVG_HMNVS"
-#define LEADER_LINKED BASE_LEADER_LINKED,"CUP_NVG_HMNVS"
+#define LINKED BASE_LINKED
+#define LEADER_LINKED BASE_LEADER_LINKED
 
 
 // -------------------- PASTE ABOVE THIS LINE
@@ -119,6 +123,7 @@ description = "British Armed Forces c. 2023 - includes Light AT (M72A7) and DMR 
 
 #define DEMO "DemoCharge_Remote_Mag:2"
 #define DEMO_TOOL "ACE_Clacker"
+#define NVG "CUP_NVG_PVS15_black_WP"
 
 class CUP_BOX_GB_Ammo_F {
   boxCustomName = "FT Resupply Crate";
@@ -130,21 +135,22 @@ class ACE_medicalSupplyCrate_advanced {
   TransportItems[] = {BASE_MEDICAL,BASE_MEDICAL,MEDIC_MEDICAL};
 };
 
-class Car {};
-class Tank {};
-class Helicopter {};
+class Car {
+  TransportWeapons[] = {AT};
+  TransportMagazines[] = {RIFLE_MAG,RIFLE_MAG,CARBINE_MAG,AR_MAG,AR_MAG,GLRIFLE_MAG_HE};
+  TransportItems[] = {BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL};
+};
+class Tank {
+  TransportWeapons[] = {AT};
+  TransportMagazines[] = {RIFLE_MAG,RIFLE_MAG,CARBINE_MAG,AR_MAG,AR_MAG,GLRIFLE_MAG_HE};
+  TransportItems[] = {BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL};
+};
+class Helicopter {
+  TransportMagazines[] = {RIFLE_MAG,RIFLE_MAG,CARBINE_MAG,AR_MAG,AR_MAG,GLRIFLE_MAG_HE};
+  TransportItems[] = {BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL,BASE_MEDICAL};
+};
 class Plane {};
 class Ship_F {};
-
-class CUP_B_Merlin_HC3_Armed_GB {
-  minVehicleBoxSpace = 6;
-  class CUP_BOX_GB_Ammo_F: CUP_BOX_GB_Ammo_F {
-      boxCount = 2;
-  };
-  class ACE_medicalSupplyCrate_advanced: ACE_medicalSupplyCrate_advanced {
-      boxCount = 1;
-  };
-};
 
 class rifleman {// rifleman
   uniform[] = {CAMO_UNIFORM};
@@ -192,8 +198,8 @@ class uav: rifleman {
 class ar: rifleman {// AR
   vest[] = {CAMO_VEST_AR};
   backpack[] = {CAMO_BACKPACK_AR};
-  weapons[] = {AR};
-  magazines[] = {AR_MAG,PISTOL_MAG,BASE_GRENADES};
+  weapons[] = {LAR};
+  magazines[] = {LAR_MAG,PISTOL_MAG,BASE_GRENADES};
   handguns[] = {PISTOL};
 };
 class aar: rifleman {// AAR
@@ -202,7 +208,7 @@ class aar: rifleman {// AAR
   linkedItems[] += {BINOS};
 };
 class lat: Fic_Soldier_Carbine {// RAT
-  backpack[] = {CAMO_BACKPACK_LAT };
+  backpack[] = {CAMO_BACKPACK_LAT};
   magazines[] += {AT_MAG};
   launchers[] = {AT};
 };
@@ -287,6 +293,19 @@ class pilot {// Pilot
   items[] = {BASE_MEDICAL,TOOLS,LEADER_TOOLS,RADIO_MR};
   linkedItems[] = {LINKED,LEADER_LINKED};
 };
+/*
+class pilot {// Jet Pilot
+  uniform[] = {"U_B_HeliPilotCoveralls"};
+  backpack[] = {"B_Battle_Belt_XL_F"};
+  vest[] = {"Aircrew_vest_2_NH"};
+  headgear[] = {"H_PilotHelmetFighter_B"};
+  handguns[] = {PISTOL};
+  magazines[] = {PISTOL_MAG,CREW_GRENADES};
+  backpackItems[] = {SIDE_KEY,RADIO_LR};
+  items[] = {BASE_MEDICAL,TOOLS,LEADER_TOOLS,RADIO_MR};
+  linkedItems[] = {LINKED,LEADER_LINKED};
+};
+*/
 class vicc: Fic_Soldier_Carbine {// Crew
   uniform[] = {CAMO_UNIFORM_VICC};
   vest[] = {CAMO_VEST_VICC};

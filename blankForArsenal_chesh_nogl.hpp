@@ -14,7 +14,7 @@ description = "description";
 #define CAMO_VEST_FTL ""
 #define CAMO_VEST_SL ""
 #define CAMO_VEST_MEDIC ""
-#define CAMO_VEST_CREW ""
+#define CAMO_VEST_CC ""
 #define CAMO_BACKPACK_LAT ""
 #define CAMO_BACKPACK_AR ""
 #define CAMO_BACKPACK_FTL ""
@@ -322,9 +322,11 @@ class mtrl: sl {// Mortar Lead
   items[] += {BASE_ARTILLERY};
 };
 class helicrew: pilot {// Aircrew
+  vest[] = {CAMO_VEST_CC};
   backpackItems[] = {"Toolkit",SIDE_KEY};
 };
 class cc: helicrew {// Crew Chief
+  vest[] = {CAMO_VEST_CC};
   backpackItems[] += {RADIO_MR};
 };
 class engl: eng {// Logistics Leader

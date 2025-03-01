@@ -26,7 +26,7 @@
 #define BINOS "Binocular"
 #define RANGE_FINDER "ACE_Vector"
 #define BASE_BALLISTICS "ACE_ATragMX","ACE_Kestrel4500"
-#define BASE_ARTILLERY "ACE_artilleryTable",BASE_BALLISTICS,"ACE_PlottingBoard","acex_intelitems_notepad"
+#define BASE_ARTILLERY "ACE_artilleryTable",BASE_BALLISTICS,"ACE_PlottingBoard","acex_intelitems_notepad","ace_marker_flags_red:15"
 
 // OPTIX
 #define WARSAW_OPTICS "rhs_acc_1p63", "rhs_acc_ekp1", "rhs_acc_ekp8_02", "rhs_acc_pkas" // note RHS and CUP mount optics differently, not cross compatible

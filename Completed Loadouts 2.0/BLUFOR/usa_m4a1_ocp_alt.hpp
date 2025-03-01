@@ -1,5 +1,5 @@
 author = "AChesheireCat";
-description = "United States Army c. 2017. SF (Green Berets) section included.";
+description = "United States Army c. 2017. SF (Green Berets) section included. (Last updated: 2025/02/28)";
 #include "undef.hpp" // Reset defines
 
 // rifleman_03 is an XM-29 grenadier, rifleman_04 is a marksman
@@ -163,19 +163,105 @@ class Helicopter {
 class Plane {};
 class Ship_F {};
 
-class CUP_B_nM1038_4s_USA_DES {
-    minVehicleBoxSpace = 40;
+// Resupply Boxes in Vehicles
+
+// Stryker ICV
+class CUP_B_M1126_ICV_M2_Woodland { // M1126 .50cal M2
+    minVehicleBoxSpace = 10;
   class Box_NATO_Wps_F: Box_NATO_Wps_F {
-    boxCount = 10;
+    boxCount = 2;
   };
   class Box_NATO_WpsLaunch_F: Box_NATO_WpsLaunch_F {
-    boxCount = 4;
+    boxCount = 1;
   };
   class ACE_medicalSupplyCrate_advanced: ACE_medicalSupplyCrate_advanced {
-    boxCount = 4;
+    boxCount = 1;
+  };
+  class Land_CanisterFuel_F {
+    boxCount = 2;
   };
   class CUP_WeaponCase_Black_CUP: CUP_WeaponCase_Black_CUP {
-    boxCount = 3;
+    boxCount = 1;
+  };
+};
+class CUP_B_M1126_ICV_MK19_Woodland { // M1126 40mm MK19
+    minVehicleBoxSpace = 10;
+  class Box_NATO_Wps_F: Box_NATO_Wps_F {
+    boxCount = 2;
+  };
+  class Box_NATO_WpsLaunch_F: Box_NATO_WpsLaunch_F {
+    boxCount = 1;
+  };
+  class ACE_medicalSupplyCrate_advanced: ACE_medicalSupplyCrate_advanced {
+    boxCount = 1;
+  };
+  class Land_CanisterFuel_F {
+    boxCount = 2;
+  };
+  class ACE_Wheel {
+    boxCount = 2;
+  };
+  class CUP_WeaponCase_Black_CUP: CUP_WeaponCase_Black_CUP {
+    boxCount = 1;
+  };
+};
+
+// RG-31
+class CUP_B_RG31_M2_OD_USA { // RG-31 .50cal M2
+    minVehicleBoxSpace = 10;
+  class Box_NATO_Wps_F: Box_NATO_Wps_F {
+    boxCount = 2;
+  };
+  class Box_NATO_WpsLaunch_F: Box_NATO_WpsLaunch_F {
+    boxCount = 1;
+  };
+  class ACE_medicalSupplyCrate_advanced: ACE_medicalSupplyCrate_advanced {
+    boxCount = 1;
+  };
+  class Land_CanisterFuel_F {
+    boxCount = 2;
+  };
+  class CUP_WeaponCase_Black_CUP: CUP_WeaponCase_Black_CUP {
+    boxCount = 1;
+  };
+};
+class CUP_B_RG31_Mk19_OD_USA { // RG-31 40mm MK19
+    minVehicleBoxSpace = 10;
+  class Box_NATO_Wps_F: Box_NATO_Wps_F {
+    boxCount = 2;
+  };
+  class Box_NATO_WpsLaunch_F: Box_NATO_WpsLaunch_F {
+    boxCount = 1;
+  };
+  class ACE_medicalSupplyCrate_advanced: ACE_medicalSupplyCrate_advanced {
+    boxCount = 1;
+  };
+  class Land_CanisterFuel_F {
+    boxCount = 2;
+  };
+  class ACE_Wheel {
+    boxCount = 2;
+  };
+  class CUP_WeaponCase_Black_CUP: CUP_WeaponCase_Black_CUP {
+    boxCount = 1;
+  };
+};
+class CUP_B_RG31_M2_OD_GC_USA { // RG-31 Command Vehicle .50cal M2
+    minVehicleBoxSpace = 10;
+  class Box_NATO_Wps_F: Box_NATO_Wps_F {
+    boxCount = 2;
+  };
+  class Box_NATO_WpsLaunch_F: Box_NATO_WpsLaunch_F {
+    boxCount = 1;
+  };
+  class ACE_medicalSupplyCrate_advanced: ACE_medicalSupplyCrate_advanced {
+    boxCount = 1;
+  };
+  class Land_CanisterFuel_F {
+    boxCount = 2;
+  };
+  class CUP_WeaponCase_Black_CUP: CUP_WeaponCase_Black_CUP {
+    boxCount = 1;
   };
 };
 
@@ -285,14 +371,14 @@ class msamag: Fic_Spotter {// SAM Spotter/Ammo Bearer
   SAM_GEAR(CARRYALL, SAM_MAG)
 };
 class mtrg: Fic_Soldier_Carbine {// Mortar Gunner - 60mm Mortar
-  launchers[] = {"potato_vz99_carryWeapon"};
+  launchers[] = {"avm224_W_M224_mortar_carry"};
   MORTAR_GEAR(CARRYALL)
-  magazines[] += {"potato_vz99_HE_multi:8","potato_vz99_smokeWhite:2"};
+  magazines[] += {"avm224_M_6Rnd_60mm_HE_0_csw:10","avm224_M_6Rnd_60mm_HE_csw:10"};
 };
 class mtrag: Fic_Spotter {// Assistant Mortar
 //  launchers[] = {"ace_csw_carryMortarBaseplate"};
   MORTAR_GEAR(CARRYALL)
-  magazines[] += {"potato_vz99_HE_multi:6","potato_vz99_smokeWhite:4"};
+  magazines[] += {"avm224_M_6Rnd_60mm_HE_csw:10","avm224_M_6Rnd_60mm_SMOKE_csw:10","avm224_M_6Rnd_60mm_ILLUM_IR_csw:5"};
 };
 class spotter: Fic_Spotter {// Spotter
   uniform[] = {CAMO_UNIFORM_SNIPER};
@@ -452,7 +538,7 @@ class msaml: sl {// MSAM Lead
 };
 class mtrl: sl {// Mortar Lead
   items[] += {BASE_ARTILLERY};
-  magazines[] += {"potato_vz99_HE_multi:2","potato_vz99_smokeWhite:4"};
+  magazines[] += {"avm224_M_6Rnd_60mm_HE_csw:5","avm224_M_6Rnd_60mm_SMOKE_csw:5","avm224_M_6Rnd_60mm_ILLUM_IR_csw:5"};
 };
 class helicrew: pilot {// Aircrew
   backpackItems[] = {"Toolkit",SIDE_KEY};

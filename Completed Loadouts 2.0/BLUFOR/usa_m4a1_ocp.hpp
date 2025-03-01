@@ -1,5 +1,5 @@
 author = "AChesheireCat";
-description = "Stryker-mounted United States Army c. 2023 - inspired by images taken during Exercise Saber Junction 23. SF (Green Berets) section included.";
+description = "Stryker-mounted United States Army c. 2023 - inspired by images taken during Exercise Saber Junction 23. SF (Green Berets) section included. (Last updated: 2025/02/28)";
 #include "undef.hpp" // Reset defines
 
 // ------------------- PASTE BELOW THIS LINE
@@ -100,6 +100,7 @@ description = "Stryker-mounted United States Army c. 2023 - inspired by images t
 #define ETOOL "ACE_EntrenchingTool"
 #define NVG "CUP_NVG_PVS14_WP"
 #define TNVG "psq42_blk"
+#define YARDAGE "ACE_Yardage450"
 
 // -------------------- PASTE ABOVE THIS LINE
 //Custom Defines
@@ -285,7 +286,7 @@ class ftl: rifleman {// FTL
   weapons[] = {GLRIFLE};
   magazines[] = {GLRIFLE_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,LEADER_GRENADES};
   items[] += {LEADER_TOOLS};
-  linkedItems[] += {LEADER_LINKED,BINOS};
+  linkedItems[] += {LEADER_LINKED,YARDAGE};
 //  attachments[] = {"CUP_acc_ANPEQ_15","CUP_optic_ACOG2"};
 //  opticChoices[] = {MAG_OPTICS};
 };
@@ -318,7 +319,7 @@ class ar: rifleman {// AR
 class aar: rifleman {// AAR
   backpack[] = {CAMO_BACKPACK_AR};
   backpackItems[] += {AR_MAG};
-  linkedItems[] += {BINOS};
+  linkedItems[] += {YARDAGE};
 };
 class lat: Fic_Soldier_Carbine {// RAT
   backpack[] = {CAMO_BACKPACK_LAT};
@@ -369,14 +370,14 @@ class msamag: Fic_Spotter {// SAM Spotter/Ammo Bearer
   SAM_GEAR(CARRYALL, SAM_MAG)
 };
 class mtrg: Fic_Soldier_Carbine {// Mortar Gunner - 60mm Mortar
-  launchers[] = {"potato_vz99_carryWeapon"};
+  launchers[] = {"avm224_W_M224_mortar_carry"};
   MORTAR_GEAR(CARRYALL)
-  magazines[] += {"potato_vz99_HE_multi:8","potato_vz99_smokeWhite:2"};
+  magazines[] += {"avm224_M_6Rnd_60mm_HE_0_csw:10","avm224_M_6Rnd_60mm_HE_csw:10"};
 };
 class mtrag: Fic_Spotter {// Assistant Mortar
 //  launchers[] = {"ace_csw_carryMortarBaseplate"};
   MORTAR_GEAR(CARRYALL)
-  magazines[] += {"potato_vz99_HE_multi:6","potato_vz99_smokeWhite:4"};
+  magazines[] += {"avm224_M_6Rnd_60mm_HE_csw:10","avm224_M_6Rnd_60mm_SMOKE_csw:10","avm224_M_6Rnd_60mm_ILLUM_IR_csw:5"};
 };
 class spotter: Fic_Spotter {// Spotter
   uniform[] = {CAMO_UNIFORM_SNIPER};
@@ -540,7 +541,7 @@ class msaml: sl {// MSAM Lead
 };
 class mtrl: sl {// Mortar Lead
   items[] += {BASE_ARTILLERY};
-  magazines[] += {"potato_vz99_HE_multi:2","potato_vz99_smokeWhite:4"};
+  magazines[] += {"avm224_M_6Rnd_60mm_HE_csw:5","avm224_M_6Rnd_60mm_SMOKE_csw:5","avm224_M_6Rnd_60mm_ILLUM_IR_csw:5"};
 };
 class helicrew: pilot {// Aircrew
   backpackItems[] = {"Toolkit",SIDE_KEY};

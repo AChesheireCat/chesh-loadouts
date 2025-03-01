@@ -505,7 +505,7 @@ class sf_ftl: sf_rifleman {// FTL
   vest[] = {SF_VEST_FTL};
   backpack[] = {SF_BACKPACK};
   weapons[] = {SF_RIFLE};
-  magazines[] = {SF_RIFLE_MAGLEADER_GRENADES};
+  magazines[] = {SF_RIFLE_MAG,LEADER_GRENADES};
   items[] += {LEADER_TOOLS};
   linkedItems[] += {LEADER_LINKED,BINOS};
 };
