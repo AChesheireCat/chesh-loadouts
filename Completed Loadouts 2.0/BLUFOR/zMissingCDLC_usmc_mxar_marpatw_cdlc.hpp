@@ -1,16 +1,16 @@
 author = "AChesheireCat";
-description = "United States Marine Corps c.2035 - req. Expeditionary Forces cDLC";
+description = "United States Marine Corps c.2035 - req. Expeditionary Forces cDLC, Project True Viking 2.0, and CUP (Last Updated: 2025/03/08)";
 #include "undef.hpp" // Reset defines
 
 // ------------------- PASTE BELOW THIS LINE
 
 
 // Camo set
-#define CAMO_UNIFORM "EF_U_B_MarineCombatUniform_Wdl_1","EF_U_B_MarineCombatUniform_Wdl_2","EF_U_B_MarineCombatUniform_Wdl_3","EF_U_B_MarineCombatUniform_Wdl_4","EF_U_B_MarineCombatUniform_Wdl_5","EF_U_B_MarineCombatUniform_Wdl_6"
+#define CAMO_UNIFORM "EF_U_B_MarineCombatUniform_Wdl_1","EF_U_B_MarineCombatUniform_Wdl_2","EF_U_B_MarineCombatUniform_Wdl_3","EF_U_B_MarineCombatUniform_Wdl_4","EF_U_B_MarineCombatUniform_Wdl_5","EF_U_B_MarineCombatUniform_Wdl_6","EF_U_B_MarineCombatUniform_Wdl_2","EF_U_B_MarineCombatUniform_Wdl_2","EF_U_B_MarineCombatUniform_Wdl_3","EF_U_B_MarineCombatUniform_Wdl_3"
 #define CAMO_VEST "EF_V_AAV_Rifleman_Coy","EF_V_AAV_Scout_Coy"
 #define CAMO_BACKPACK "B_Battle_Belt_F"
 #define CARRYALL "EF_B_Carryall_coy"
-#define CAMO_HEADGEAR "EF_H_MCH_FullCamo_Wdl","EF_H_MCH_FullCamo_Wdl","EF_H_MCH_Full","EF_H_MCH_BasicNet_Wdl","EF_H_MCH_BasicNet_Wdl","EF_H_MCH_Basic"
+#define CAMO_HEADGEAR "EF_H_MCH_FullCamo_Wdl","EF_H_MCH_FullCamo_Wdl","EF_H_MCH_FullCamo_Wdl","EF_H_MCH_Full","EF_H_MCH_BasicNet_Wdl","EF_H_MCH_BasicNet_Wdl","EF_H_MCH_Basic"
 #define CAMO_HEADGEAR_SPECIAL "EF_H_Booniehat_Wdl"
 // Pilot Camo set
 #define CAMO_UNIFORM_PILOT "U_B_HeliPilotCoveralls"
@@ -25,15 +25,16 @@ description = "United States Marine Corps c.2035 - req. Expeditionary Forces cDL
 // Rifle
 #define RIFLE "ef_arifle_mxar_coy"
 #define RIFLE_MAG "EF_30Rnd_65x39_caseless_coy_mag:7","EF_30Rnd_65x39_caseless_coy_mag_Tracer:3"
-#define RIFLE_ATTACHMENTS "CUP_optic_VortexRazor_UH1_Tan","ACE_DBAL_A3_Green"
+#define RIFLE_ATTACHMENTS "ef_optic_Holosight_coy","EF_acc_pointer_IR_coy"
 #define AAR_ATTACHMENTS RIFLE_ATTACHMENTS
-#define ALT_OPTICS "ptv_eot552","CUP_optic_MicroT1","ptv_compm5","ptv_xps3_des"
+#define ALT_OPTICS "ptv_eot552","CUP_optic_MicroT1","ptv_compm5","ptv_xps3_des","CUP_optic_VortexRazor_UH1_Tan"
 #define MAG_OPTICS "ef_optic_mbs_remote_coy","cup_optic_g33_hws_blk"
 // GL Rifle
 #define GLRIFLE "ef_arifle_mxar_gl_coy"
 #define GLRIFLE_MAG RIFLE_MAG
 #define GLRIFLE_MAG_SMOKE "1Rnd_Smoke_Grenade_shell:2","1Rnd_SmokeRed_Grenade_shell:2"
-#define GLRIFLE_MAG_HE "CUP_1Rnd_HEDP_M203:5"
+#define GLRIFLE_MAG_HE "1Rnd_HE_Grenade_shell:5"
+#define GLRIFLE_MAG_HEDP ":5"
 #define GLRIFLE_MAG_FLARE "UGL_FlareGreen_F:4"
 #define GLRIFLE_MAG_ILLUM "CUP_1Rnd_StarFlare_White_M203:4"
 #define GLRIFLE_MAG_HUNTIR "ACE_HuntIR_M203:3"
@@ -43,24 +44,24 @@ description = "United States Marine Corps c.2035 - req. Expeditionary Forces cDL
 #define CARBINE_MAG RIFLE_MAG
 // AR
 #define AR "ef_arifle_mx_sw_coy"
-#define AR_MAG "EF_100Rnd_65x39_caseless_coy_mag:3","EF_100Rnd_65x39_caseless_coy_mag_Tracer:1"
-#define AR_ATTACHMENTS "CUP_optic_VortexRazor_UH1_Tan","ACE_DBAL_A3_Green","bipod_01_F_blk"
+#define AR_MAG "EF_100Rnd_65x39_caseless_coy_mag:4"
+#define AR_ATTACHMENTS "ef_optic_Holosight_coy","EF_acc_pointer_IR_coy","bipod_01_F_snd"
 // AR2
-#define AR2 "LMG_Mk200_F"
-#define AR2_MAG "200Rnd_65x39_cased_Box_Red:2"
+#define LMG "LMG_Mk200_F"
+#define LMG_MAG "200Rnd_65x39_cased_Box_Red:2"
 // AT
 #define AT "launch_NLAW_F"
 #define AT_MAG 
 // MMG
-#define MMG "CUP_lmg_M240_B"
-#define MMG_MAG "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M:5"
-#define MMG_ATTACHMENTS "ef_optic_mbs","ACE_DBAL_A3_Green"
+#define MMG "MMG_02_sand_F"
+#define MMG_MAG "130Rnd_338_Mag:4"
+#define MMG_ATTACHMENTS "ef_optic_mbs_coy","EF_acc_pointer_IR_coy","bipod_01_F_snd"
 // MAT
 #define MAT "launch_MRAWS_green_F"
 #define MAT_MAG "MRAWS_HEAT55_F:2","MRAWS_HE_F:1","MAA_MAAWS_SMOKE469:2","MAA_MAAWS_ILLUM545:1"
 #define MAT_MAG2 "MRAWS_HEAT55_F:2","MRAWS_HE_F:1","MAA_MAAWS_SMOKE469:1","MAA_MAAWS_ILLUM545:2"
 #define MAT_MAG3 "MRAWS_HEAT55_F:1","MRAWS_HE_F:1"
-#define MAT_OPTIC "ACE_DBAL_A3_Green"
+#define MAT_OPTIC "EF_acc_pointer_IR_coy"
 // HMG
 #define HMG "ace_csw_staticM2ShieldCarry"
 #define HMG_TRI_HI "ace_csw_m3CarryTripod"
@@ -70,18 +71,18 @@ description = "United States Marine Corps c.2035 - req. Expeditionary Forces cDL
 #define HAT "CUP_launch_Javelin"
 #define HAT_TRI_HI 
 #define HAT_TRI_LO 
-#define HAT_MAG "CUP_Javelin_M:2" 
+#define HAT_MAG "CUP_Javelin_M:2"
 // SAM
 #define SAM "EF_launch_B_Titan_Coy"
 #define SAM_MAG "ace_missile_manpad_stinger_man:2"
 // Sniper
 #define SNIPER "CUP_srifle_M2010_wdl"
 #define SNIPER_MAG "CUP_5Rnd_762x67_M2010_M:10"
-#define SNIPER_ATTACHMENTS "muzzle_snds_B", "ACE_acc_pointer_green", "CUP_optic_LeupoldM3LR", "CUP_bipod_Harris_1A2_L_BLK"
+#define SNIPER_ATTACHMENTS "muzzle_snds_B","ACE_acc_pointer_green","CUP_optic_LeupoldM3LR","CUP_bipod_Harris_1A2_L_BLK"
 // Spotter
 #define SPOTTER CARBINE
 #define SPOTTER_MAG RIFLE_MAG
-#define SPOTTER_ATTACHMENTS "ef_snds_mxar_coy","ACE_DBAL_A3_Green","ef_optic_mbs_remote_coy"
+#define SPOTTER_ATTACHMENTS "ef_snds_mxar_coy","EF_acc_pointer_IR_coy","ef_optic_mbs_remote_coy"
 // SMG
 #define SMG "ef_arifle_mxc_coy"
 #define SMG_MAG "EF_30Rnd_65x39_caseless_coy_mag_Tracer:5" 
@@ -94,8 +95,8 @@ description = "United States Marine Corps c.2035 - req. Expeditionary Forces cDL
 // Gear
 #define TOOLS RADIO_SR,"ACE_MapTools","ACE_IR_Strobe_item:2","ACE_Flashlight_XL50","ACE_CableTie:2"
 #define LEADER_TOOLS BASE_LEADER_TOOLS,SIDE_KEY
-#define LINKED BASE_LINKED,"EF_LPNVG"
-#define LEADER_LINKED BASE_LEADER_LINKED,"EF_LPNVG_T"
+#define LINKED BASE_LINKED,NVG
+#define LEADER_LINKED BASE_LEADER_LINKED,NVG
 
 
 // -------------------- PASTE ABOVE THIS LINE
@@ -111,9 +112,13 @@ description = "United States Marine Corps c.2035 - req. Expeditionary Forces cDL
 #define CAMO_BACKPACK_MEDIC "ptv_DeltaPack_Cbr"
 #define CAMO_UNIFORM_SNIPER CAMO_UNIFORM
 
+#define NVG "EF_LPNVG"
+#define NVG_T "EF_LPNVG_T"
+#define ETOOL "ACE_EntrenchingTool"
+
 #define DMR "ef_arifle_mxm_coy"
 #define DMR_MAG "EF_30Rnd_65x39_caseless_coy_mag:10"
-#define DMR_ATTACHMENTS "ef_optic_mbs_remote_coy","ACE_DBAL_A3_Green","ef_snds_mxar_coy","bipod_01_F_blk"
+#define DMR_ATTACHMENTS "ef_optic_mbs_remote_coy","EF_acc_pointer_IR_coy","ef_snds_mxar_coy","bipod_01_F_snd"
 
 //  init = "this addGoggles selectRandom ['cwr3_b_facewear_scrimnet_scarf_olive','G_Shades_Red','CUP_G_ESS_BLK','CUP_G_WatchGPSCombo','CUP_G_Oakleys_Drk','CUP_FR_NeckScarf','CUP_G_ESS_KHK_Dark'];"
 
@@ -145,10 +150,12 @@ class rifleman {// rifleman
   backpack[] = {CAMO_BACKPACK};
   backpackItems[] = {BASE_MEDICAL,CAMO_HEADGEAR_SPECIAL};
   weapons[] = {RIFLE};
-  magazines[] = {RIFLE_MAG,BASE_GRENADES};
+  handguns[] = {PISTOL};
+  magazines[] = {RIFLE_MAG,PISTOL_MAG,BASE_GRENADES};
   items[] = {TOOLS};
   linkedItems[] = {LINKED};
   attachments[] = {RIFLE_ATTACHMENTS};
+  handgunAttachments[] = {PISTOL_ATTACHMENTS};
   opticChoices[] = {ALT_OPTICS};
 };
 class Fic_Soldier_Carbine: rifleman {// carbine-man
@@ -159,16 +166,14 @@ class ftl: rifleman {// FTL
   vest[] = {CAMO_VEST_FTL};
   backpack[] = {CAMO_BACKPACK_FTL};
   weapons[] = {GLRIFLE};
-  magazines[] = {GLRIFLE_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,LEADER_GRENADES};
+  magazines[] = {GLRIFLE_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,PISTOL_MAG,LEADER_GRENADES};
   items[] += {LEADER_TOOLS};
   linkedItems[] += {LEADER_LINKED,BINOS};
 };
 class sl: ftl {// SL
   vest[] = {CAMO_VEST_SL};
   backpack[] = {CAMO_BACKPACK_SL};
-  handguns[] = {PISTOL};
-  secondaryAttachments[] = {PISTOL_ATTACHMENTS};
-  magazines[] += {PISTOL_MAG,GLRIFLE_MAG_HUNTIR};
+  magazines[] += {GLRIFLE_MAG_HUNTIR};
   linkedItems[] = {LINKED,LEADER_LINKED,RANGE_FINDER};
   items[] += {RADIO_MR,"ACE_HuntIR_monitor"};
 };
@@ -187,7 +192,7 @@ class ar: rifleman {// AR
   weapons[] = {AR};
   magazines[] = {AR_MAG,PISTOL_MAG,BASE_GRENADES};
   handguns[] = {PISTOL};
-  hangunAttachments[] = {PISTOL_ATTACHMENTS};
+  handgunAttachments[] = {PISTOL_ATTACHMENTS};
 };
 class aar: rifleman {// AAR
   backpack[] = {CAMO_BACKPACK_AR};
