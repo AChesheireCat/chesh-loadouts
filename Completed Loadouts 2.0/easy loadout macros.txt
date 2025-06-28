@@ -54,13 +54,13 @@ OR
 // HMG - NSV (1985)
 #define HMG "ace_compat_rhs_afrf3_nsv_carry"
 #define HMG_TRI_HI "ace_csw_kordCarryTripod"
-#define HMG_TRI_LO "ace_csw_kordCarryTripodLow"
+#define HMG_TRI_LO "ace_csw_kordCarryTripod"
 #define HMG_MAG "ace_csw_50Rnd_127x108_mag:4"
 
 // HMG - KORD (1999)
 #define HMG "CUP_KORD_carry"
 #define HMG_TRI_HI "ace_csw_kordCarryTripod"
-#define HMG_TRI_LO "ace_csw_kordCarryTripod"
+#define HMG_TRI_LO "ace_csw_kordCarryTripodLow"
 #define HMG_MAG "ace_csw_50Rnd_127x108_mag:5"
 
 // HMG - M2

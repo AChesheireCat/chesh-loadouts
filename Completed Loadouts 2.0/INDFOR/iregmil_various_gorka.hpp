@@ -134,6 +134,60 @@ description = "Irregular Militia (as seen from Squad) c. 2020 - Uses S.O.G Prari
 #define MMG_ATTACHMENTS "rhs_acc_1p29"
 #define CAMO_UNIFORM_SNIPER CAMO_UNIFORM
 
+// ------------- Vehicle Pool -------------
+transportVehiclePool[] = {
+    "CUP_O_Ural_CHDKZ",
+    "CUP_O_Ural_CHDKZ",
+    "CUP_O_Ural_CHDKZ",
+    "CUP_O_Ural_Open_CHDKZ",
+    "CUP_O_Ural_Open_CHDKZ"
+    "CUP_O_Hilux_unarmed_CHDKZ",
+    "CUP_O_UAZ_Unarmed_CHDKZ",
+    "CUP_O_UAZ_Open_CHDKZ"
+};
+armedSoftVehiclesPool[] = {
+    "CUP_O_UAZ_MG_CHDKZ",
+    "CUP_O_UAZ_MG_CHDKZ",
+    "CUP_O_UAZ_MG_CHDKZ",
+    "CUP_O_UAZ_METIS_CHDKZ",
+    "CUP_O_UAZ_SPG9_CHDKZ",
+    "CUP_O_Datsun_PK",
+    "CUP_O_Datsun_PK",
+    "CUP_O_Datsun_PK",
+    "CUP_O_Hilux_DSHKM_CHDKZ",
+    "CUP_O_Hilux_DSHKM_CHDKZ",
+    "CUP_O_Hilux_DSHKM_CHDKZ",
+    "CUP_O_Hilux_metis_CHDKZ",
+    "CUP_O_Hilux_SPG9_CHDKZ",
+    "CUP_O_Hilux_podnos_CHDKZ",
+    "CUP_O_Hilux_UB32_CHDKZ",
+    "CUP_O_Hilux_zu23_CHDKZ",
+    "CUP_O_Ural_ZU23_CHDKZ",
+    "CUP_O_UAZ_AA_CHDKZ"
+};
+armoredVehiclePool[] = {
+    "CUP_O_BTR80_CHDKZ",
+    "CUP_O_BTR80_CHDKZ",
+    "CUP_O_BTR80_CHDKZ",
+    "CUP_O_BTR80_CHDKZ",
+    "CUP_O_BRDM2_CHDKZ",
+    "CUP_O_BRDM2_CHDKZ",
+    "CUP_O_BRDM2_CHDKZ",
+    "CUP_O_MTLB_pk_ChDKZ",
+    "CUP_O_MTLB_pk_ChDKZ",
+    "gmx_chdkz_bmp1sp2_wdr",
+    "gmx_chdkz_bmp1sp2_wdr",
+    "CUP_O_BTR80A_CHDKZ",
+    "CUP_O_BMP2_CHDKZ",
+    "CUP_O_BRDM2_ATGM_CHDKZ"
+};
+tankVehiclePool[] = {
+    "CUP_O_T72_CHDKZ"
+};
+reinforcementTruck = "CUP_O_Ural_CHDKZ"
+reinforcementArmed = "CUP_O_BTR80_CHDKZ"
+// ------------- End Vehicle Pool -------------
+
 //  init = "this addGoggles selectRandom ['G_Balaclava_blk','G_Balaclava_blk','G_Balaclava_blk',''];"
 
 class Car {

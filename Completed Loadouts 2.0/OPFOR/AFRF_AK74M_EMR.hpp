@@ -1,5 +1,5 @@
 author = "AChesheireCat";
-description = "Russian Federation Motor Rifles c. 2020 (Last updated: 2024/12/13)";
+description = "Russian Federation Motor Rifles c. 2020 (Last updated: 2025/06/26)";
 #include "undef.hpp" // Reset defines
 
 // Rifleman_02 is a Marksman.
@@ -88,12 +88,12 @@ description = "Russian Federation Motor Rifles c. 2020 (Last updated: 2024/12/13
 #define PISTOL_MAG "16Rnd_9x21_Mag:3"
 #define PISTOL_OPTIC 
 // Grenades
-#define LEADER_GRENADES SIDE_FRAG,LEADER_SMOKES,SIDE_CHEM_LIGHT
-#define SIDE_FRAG "rhs_mag_rgd5:2"
-#define SIDE_SMOKE "SmokeShell:2"
+#define LEADER_GRENADES LOADOUT_FRAG,LEADER_SMOKES,SIDE_CHEM_LIGHT
+#define LOADOUT_FRAG "rhs_mag_rgd5:2"
+#define LOADOUT_SMOKE "SmokeShell:2"
 #define OFF_FRAG "rhs_mag_rgn:2"
 #define DEF_FRAG "rhs_mag_rgo:2"
-#define BASE_GRENADES SIDE_FRAG,SIDE_SMOKE
+#define LOADOUT_GRENADES LOADOUT_FRAG,LOADOUT_SMOKE
 // Gear
 #define TOOLS BASE_TOOLS
 #define LEADER_TOOLS BASE_LEADER_TOOLS,SIDE_KEY
@@ -150,7 +150,7 @@ class rifleman {// rifleman
   backpack[] = {CAMO_BACKPACK};
   backpackItems[] = {BASE_MEDICAL};
   weapons[] = {RIFLE};
-  magazines[] = {RIFLE_MAG,BASE_GRENADES};
+  magazines[] = {RIFLE_MAG,LOADOUT_GRENADES};
   items[] = {TOOLS};
   linkedItems[] = {LINKED};
   attachments[] = {RIFLE_ATTACHMENTS};
@@ -159,7 +159,7 @@ class rifleman {// rifleman
 };
 class Fic_Soldier_Carbine: rifleman {// carbine-man
   weapons[] = {CARBINE};
-  magazines[] = {CARBINE_MAG,BASE_GRENADES};
+  magazines[] = {CARBINE_MAG,LOADOUT_GRENADES};
 };
 class ftl: rifleman {// FTL
   vest[] = {CAMO_VEST_FTL};
@@ -189,8 +189,9 @@ class ar: rifleman {// AR
   vest[] = {CAMO_VEST_AR};
   backpack[] = {CAMO_BACKPACK_AR};
   weapons[] = {AR};
-  magazines[] = {AR_MAG,PISTOL_MAG,BASE_GRENADES};
+  magazines[] = {AR_MAG,PISTOL_MAG,LOADOUT_GRENADES};
   handguns[] = {PISTOL};
+  attachments[] = {AR_ATTACHMENTS};
 };
 class aar: rifleman {// AAR
   backpack[] = {CAMO_BACKPACK_AR};
@@ -216,7 +217,7 @@ class Fic_Spotter: rifleman {
 class mmgg: ar {// MMG
   vest[] = {CAMO_VEST_MMG};
   weapons[] = {MMG};
-  magazines[] = {MMG_MAG,PISTOL_MAG,BASE_GRENADES};
+  magazines[] = {MMG_MAG,PISTOL_MAG,LOADOUT_GRENADES};
   attachments[] = {MMG_ATTACHMENTS};
   backpack[] = {CARRYALL};
   launchers[] = {"dzn_MG_Tripod_Universal_Carry"};
@@ -261,7 +262,7 @@ class mtrag: Fic_Spotter {// Assistant Mortar
 };
 class spotter: Fic_Spotter {// Spotter
   weapons[] = {SPOTTER};
-  magazines[] = {SPOTTER_MAG,BASE_GRENADES};
+  magazines[] = {SPOTTER_MAG,LOADOUT_GRENADES};
   items[] += {RADIO_MR,"ACE_ATragMX","ACE_Kestrel4500","ACE_SpottingScope"};
   linkedItems[] += {LEADER_LINKED};
   attachments[] = {SPOTTER_OPTIC};
@@ -271,7 +272,7 @@ class sniper: spotter {// Sniper
   vest[] = {CAMO_VEST_SNIPER};
   backpack[] = {"ace_gunbag"};
   weapons[] = {SNIPER};
-  magazines[] = {SPOTTER_MAG,SNIPER_MAG,BASE_GRENADES};
+  magazines[] = {SPOTTER_MAG,SNIPER_MAG,LOADOUT_GRENADES};
   backpackItems[] += {SPOTTER};
   items[] = {TOOLS,"ACE_RangeCard","ACE_Tripod"};
   linkedItems[] = {LINKED};
@@ -294,18 +295,23 @@ class vicc: Fic_Soldier_Carbine {// Crew
   headgear[] = {CAMO_HEADGEAR_VICC};
   backpack[] = {CAMO_BACKPACK_VICC};
   weapons[] = {CARBINE};
-  magazines[] = {CARBINE_MAG,CREW_GRENADES};
+  magazines[] = {SMG_MAG,CREW_GRENADES};
   backpackItems[] = {SIDE_KEY,RADIO_SR};
   linkedItems[] = {LINKED,LEADER_LINKED,BINOS};
   items[] += {BASE_MEDICAL};
 };
 class vicd: vicc {// Repair Specialist
+  weapons[] = {SMG};
+  magazines[] = {SMG_MAG,CREW_GRENADES};
   backpackItems[] = {"Toolkit",RADIO_SR,SIDE_KEY};
   linkedItems[] = {LINKED,LEADER_LINKED};
+  attachments[] = {};
 };
-class Fic_eng: vicd {
-  items[] += {BASE_ENG};
+class Fic_eng: Fic_Soldier_Carbine {
+  backpack[] = {CARRYALL};
+  items[] += {BASE_ENG,"WBK_HeadLampItem",BASE_MEDICAL};
   backpackItems[] = {};
+  linkedItems[] = {LINKED,LEADER_LINKED};
 };
 class demo: Fic_eng {// Explosive Specialist
   magazines[] += {BASE_EXP};
@@ -322,6 +328,7 @@ class eng: Fic_eng {// Logistics Engineer
   backpackItems[] = {"Toolkit","ACE_EntrenchingTool","ACE_Fortify","ACE_wirecutter"};
 };
 class fac: coy {// FAC
+  backpack[] = {"ptv_RadioBag_01_Desert"};
   magazines[] = {GLRIFLE_MAG,SIDE_FAC_GRENADES,"Laserbatteries",PISTOL_MAG};
   linkedItems[] = {LINKED,LEADER_LINKED,"CUP_LRTV"};
 };
@@ -329,7 +336,7 @@ class rifleman_02: rifleman {// Rifleman 2 - Marksman
   vest[] = {CAMO_VEST_SNIPER};
   weapons[] = {DMR};
   handguns[] = {PISTOL};
-  magazines[] = {DMR_MAG,PISTOL_MAG,BASE_GRENADES};
+  magazines[] = {DMR_MAG,PISTOL_MAG,LOADOUT_GRENADES};
   linkedItems[] = {LINKED};
   attachments[] = {DMR_ATTACHMENTS};
 };
@@ -474,7 +481,7 @@ class sf_rifleman {// sf rifleman
   backpack[] = {SF_BACKPACK};
   backpackItems[] = {BASE_MEDICAL};
   weapons[] = {SF_RIFLE};
-  magazines[] = {SF_RIFLE_MAG,BASE_GRENADES};
+  magazines[] = {SF_RIFLE_MAG,LOADOUT_GRENADES};
   items[] = {TOOLS};
   linkedItems[] = {LINKED};
   attachments[] = {SF_RIFLE_ATTACHMENTS};
@@ -483,27 +490,27 @@ class sf_rifleman {// sf rifleman
 class sf_rifleman_02: sf_rifleman {// sf rifleman 02
   vest[] = {SF_VEST_SNIPER};
   weapons[] = {SF_SNIPER};
-  magazines[] = {SF_SNIPER_MAG,BASE_GRENADES};
+  magazines[] = {SF_SNIPER_MAG,LOADOUT_GRENADES};
   linkedItems[] = {LINKED};
   attachments[] = {SF_SNIPER_ATTACHMENTS};
 };
 class sf_ar: sf_rifleman {// AR
   vest[] = {SF_VEST_AR};
   weapons[] = {SF_AR};
-  magazines[] = {SF_AR_MAG,SF_PISTOL_MAG,BASE_GRENADES};
+  magazines[] = {SF_AR_MAG,SF_PISTOL_MAG,LOADOUT_GRENADES};
   handguns[] = {SF_PISTOL};
   handgunAttachments[] = {SF_PISTOL_ATTACHMENTS};
 };
 class sf_aar: sf_rifleman {// AAR
   weapons[] = {SF_CARBINE};
-  magazines[] = {SF_CARBINE_MAG,BASE_GRENADES};
+  magazines[] = {SF_CARBINE_MAG,LOADOUT_GRENADES};
   backpackItems[] += {SF_AR_MAG};
   linkedItems[] += {BINOS};
 };
 class sf_lat: sf_rifleman {// RAT
   backpack[] = {SF_BACKPACK};
   weapons[] = {SF_CARBINE};
-  magazines[] = {SF_CARBINE_MAG,SF_AT_MAG,BASE_GRENADES};
+  magazines[] = {SF_CARBINE_MAG,SF_AT_MAG,LOADOUT_GRENADES};
   launchers[] = {SF_AT};
   secondaryAttachments[] = {SF_AT_ATTACHMENTS};
 };

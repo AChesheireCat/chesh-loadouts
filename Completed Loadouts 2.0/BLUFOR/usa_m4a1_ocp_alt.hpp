@@ -1,5 +1,5 @@
 author = "AChesheireCat";
-description = "United States Army c. 2017. SF (Green Berets) section included. (Last updated: 2025/02/28)";
+description = "United States Army c. 2017. SF (Green Berets) section included. (Last updated: 2025/04/18)";
 #include "undef.hpp" // Reset defines
 
 // rifleman_03 is an XM-29 grenadier, rifleman_04 is a marksman
@@ -16,8 +16,8 @@ description = "United States Army c. 2017. SF (Green Berets) section included. (
 #define CAMO_HEADGEAR_SL "H_tweed_ech_psq_OCP_b","H_tweed_ech_psq_OCP_b_alt","H_tweed_ech_psq_OCP_b_licht","H_tweed_ech_psq_OCP_b_ESS","H_tweed_ech_psq_OCP_b_ESS_2","H_tweed_ech_psq_OCP_TASC_b","H_tweed_ech_psq_OCP_TASC_b_ESS","H_tweed_ech_psq_OCP_TASC_b_ESS_2","H_tweed_ech_psq_OCP_TASC_b_ESS_3"
 #define CAMO_HEADGEAR_SPECIAL "H_tweed_Hat_fleece_od3"
 // Pilot Camo set
-#define CAMO_UNIFORM_PILOT "U_B_HeliPilotCoveralls"
-#define CAMO_VEST_PILOT "Aircrew_vest_2_NH"
+#define CAMO_UNIFORM_PILOT "U_tweed_acu_summer_ocp_g","U_tweed_acu_summer_ocp_jedi_g"
+#define CAMO_VEST_PILOT "CUP_V_B_LBT_LBV_US_MCam"
 #define CAMO_BACKPACK_PILOT "B_Battle_Belt_XL_F"
 #define CAMO_HEADGEAR_PILOT "H_CrewHelmetHeli_B"
 // Vic Crew Camo set
@@ -28,13 +28,14 @@ description = "United States Army c. 2017. SF (Green Berets) section included. (
 // Rifle
 #define RIFLE "CUP_arifle_M4A1_black","CUP_arifle_M4A3_black"
 #define RIFLE_MAG "ptv_30Rnd_556x45_Stanag_t:7","ptv_30Rnd_556x45_Stanag_t_Red:3"
-#define RIFLE_ATTACHMENTS "CUP_acc_ANPEQ_15","ptv_compm4s"
+#define RIFLE_ATTACHMENTS "CUP_acc_ANPEQ_15_Tan_Top","ptv_compm4s"
 #define AAR_ATTACHMENTS RIFLE_ATTACHMENTS
 #define ALT_OPTICS "ptv_eot552","CUP_optic_CompM2_low","CUP_optic_CompM2_Black","ptv_xps3_des","ptv_compm5","CUP_optic_CompM4"
-#define MAG_OPTICS "CUP_optic_ACOG","CUP_optic_ACOG2","CUP_optic_G33_HWS_BLK"
+#define MAG_OPTICS "CUP_optic_ACOG","CUP_optic_ACOG2","CUP_optic_G33_HWS_BLK","CUP_optic_Elcan_SpecterDR_coyote"
 // GL Rifle
 #define GLRIFLE "CUP_arifle_M4A1_BUIS_GL"
 #define GLRIFLE_MAG RIFLE_MAG
+#define GLRIFLE_ATTACHMENTS "CUP_acc_ANPEQ_15","ptv_eot552"
 #define GLRIFLE_MAG_SMOKE "1Rnd_Smoke_Grenade_shell:2","1Rnd_SmokeRed_Grenade_shell:2"
 #define GLRIFLE_MAG_HE "potato_1Rnd_40mm_M433_HEDP:5"
 #define GLRIFLE_MAG_FLARE "UGL_FlareGreen_F:4"
@@ -86,14 +87,11 @@ description = "United States Army c. 2017. SF (Green Berets) section included. (
 #define PISTOL_MAG "CUP_15Rnd_9x19_M9:3"
 #define PISTOL_OPTIC "potato_strongerFlashlights_Vanilla_HG_LED_flashlight"
 // Grenades
-#define LEADER_GRENADES SIDE_FRAG,LEADER_SMOKES,SIDE_CHEM_LIGHT
-#define SIDE_FRAG "HandGrenade:2"
-#define SIDE_SMOKE "SmokeShell:2"
-#define MISC_FRAG "vn_m14_grenade_mag:2"
+#define LEADER_GRENADES BASE_FRAG,LEADER_SMOKES,SIDE_CHEM_LIGHT
+#define MISC_FRAG "ACE_M14:2"
 #define STUN_FRAG "ACE_M84:2"
-#define BASE_GRENADES SIDE_FRAG,SIDE_SMOKE
 // Gear
-#define TOOLS WEST_TOOLS,ETOOL
+#define TOOLS RADIO_SR,"ACE_MapTools","ACE_IR_Strobe_item:2","ACE_Flashlight_XL50","ACE_CableTie:2"
 #define LEADER_TOOLS BASE_LEADER_TOOLS,SIDE_KEY
 #define LINKED BASE_LINKED
 #define LEADER_LINKED BASE_LEADER_LINKED
@@ -101,6 +99,8 @@ description = "United States Army c. 2017. SF (Green Berets) section included. (
 #define DEMO "DemoCharge_Remote_Mag:2"
 #define DEMO_TOOL "ACE_Clacker"
 #define ETOOL "ACE_EntrenchingTool"
+#define NVG "CUP_NVG_PVS14_WP"
+#define PILOT_NVG "CUP_NVG_GPNVG_black_WP"
 
 
 // -------------------- PASTE ABOVE THIS LINE
@@ -287,8 +287,9 @@ class ftl: rifleman {// FTL
   backpack[] = {CAMO_BACKPACK_FTL};
   weapons[] = {GLRIFLE};
   magazines[] = {GLRIFLE_MAG,GLRIFLE_MAG_HE,GLRIFLE_MAG_SMOKE,LEADER_GRENADES};
-  items[] += {LEADER_TOOLS,"acex_intelitems_notepad"};
+  items[] += {LEADER_TOOLS};
   linkedItems[] += {LEADER_LINKED,BINOS};
+  attachments[] = {GLRIFLE_ATTACHMENTS};
   opticChoices[] = {ALT_OPTICS,MAG_OPTICS};
 };
 class sl: ftl {// SL
@@ -417,12 +418,12 @@ class vicc: Fic_Soldier_Carbine {// Crew
   backpack[] = {CAMO_BACKPACK_VICC};
   weapons[] = {CARBINE};
   magazines[] = {CREW_MAG,CREW_GRENADES};
-  backpackItems[] = {SIDE_KEY,RADIO_SR};
+  backpackItems[] = {SIDE_KEY};
   linkedItems[] = {LINKED,LEADER_LINKED,BINOS};
   items[] += {BASE_MEDICAL};
 };
 class vicd: vicc {// Repair Specialist
-  backpackItems[] = {"Toolkit",RADIO_SR,SIDE_KEY};
+  backpackItems[] = {"Toolkit",SIDE_KEY};
   linkedItems[] = {LINKED,LEADER_LINKED};
 };
 class Fic_eng: Fic_Soldier_Carbine {
@@ -451,8 +452,6 @@ class fac: coy {// FAC
   linkedItems[] = {LINKED,LEADER_LINKED,"CUP_LRTV"};
 };
 class rifleman_02: rifleman {// Rifleman 2
-  backpack[] = {CAMO_BACKPACK_FTL};
-  backpackItems[] += {RIFLE_MAG};
 };
 class rifleman_03: rifleman {// Rifleman 3 - XM-29 Grenadier
   weapons[] = {XM29};

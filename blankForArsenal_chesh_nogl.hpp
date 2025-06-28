@@ -28,7 +28,7 @@ description = "description";
 #define SIDE_SMOKE ":2"
 #define OFF_FRAG ":2"
 #define DEF_FRAG ":2"
-#define BASE_GRENADES SIDE_FRAG,SIDE_SMOKE
+#define LOADOUT_GRENADES SIDE_FRAG,SIDE_SMOKE
 
 #define ETOOL "ACE_EntrenchingTool"
 #define NVG ""
@@ -61,7 +61,7 @@ class rifleman {// rifleman
   backpack[] = {CAMO_BACKPACK};
   backpackItems[] = {BASE_MEDICAL};
   weapons[] = {RIFLE};
-  magazines[] = {RIFLE_MAG,BASE_GRENADES};
+  magazines[] = {RIFLE_MAG,LOADOUT_GRENADES};
   items[] = {TOOLS};
   linkedItems[] = {LINKED};
   attachments[] = {RIFLE_ATTACHMENTS};
@@ -69,7 +69,7 @@ class rifleman {// rifleman
 };
 class Fic_Soldier_Carbine: rifleman {// carbine-man
   weapons[] = {CARBINE};
-  magazines[] = {CARBINE_MAG,BASE_GRENADES};
+  magazines[] = {CARBINE_MAG,LOADOUT_GRENADES};
 };
 class ftl: rifleman {// FTL
   vest[] = {CAMO_VEST_FTL};
@@ -100,7 +100,7 @@ class ar: rifleman {// AR
   vest[] = {CAMO_VEST_AR};
   backpack[] = {CAMO_BACKPACK_AR};
   weapons[] = {AR};
-  magazines[] = {AR_MAG,PISTOL_MAG,BASE_GRENADES};
+  magazines[] = {AR_MAG,PISTOL_MAG,LOADOUT_GRENADES};
   handguns[] = {PISTOL};
   handgunAttachments[] = {PISTOL_OPTIC};
 };
@@ -125,7 +125,7 @@ class Fic_Spotter: rifleman {
 };
 class mmgg: ar {// MMG
   weapons[] = {MMG};
-  magazines[] = {MMG_MAG,PISTOL_MAG,BASE_GRENADES};
+  magazines[] = {MMG_MAG,PISTOL_MAG,LOADOUT_GRENADES};
   attachments[] = {MMG_ATTACHMENTS};
   backpack[] = {CARRYALL};
   items[] += {ETOOL};
@@ -171,7 +171,7 @@ class spotter: Fic_Spotter {// Spotter
   uniform[] = {CAMO_UNIFORM_SNIPER};
   weapons[] = {SPOTTER};
   backpack[] = {CARRYALL};
-  magazines[] = {SPOTTER_MAG,SNIPER_MAG,BASE_GRENADES};
+  magazines[] = {SPOTTER_MAG,SNIPER_MAG,LOADOUT_GRENADES};
   items[] += {RADIO_MR,"ACE_ATragMX","ACE_Kestrel4500","ACE_SpottingScope","ACE_Tripod"};
   linkedItems[] += {LEADER_LINKED};
   attachments[] = {SPOTTER_OPTIC};
@@ -180,7 +180,7 @@ class sniper: spotter {// Sniper
   uniform[] = {CAMO_UNIFORM_SNIPER};
   backpack[] = {"ace_gunbag"};
   weapons[] = {SNIPER};
-  magazines[] = {SPOTTER_MAG,SNIPER_MAG,BASE_GRENADES};
+  magazines[] = {SPOTTER_MAG,SNIPER_MAG,LOADOUT_GRENADES};
   backpackItems[] += {SPOTTER,SPOTTER_OPTIC};
   items[] = {TOOLS,"ACE_RangeCard","ACE_Tripod"};
   linkedItems[] = {LINKED};
@@ -387,7 +387,7 @@ class sf_rifleman {// sf rifleman
   backpack[] = {SF_BACKPACK};
   backpackItems[] = {BASE_MEDICAL};
   weapons[] = {SF_RIFLE};
-  magazines[] = {SF_RIFLE_MAG,BASE_GRENADES};
+  magazines[] = {SF_RIFLE_MAG,LOADOUT_GRENADES};
   items[] = {TOOLS};
   linkedItems[] = {LINKED};
   attachments[] = {SF_RIFLE_ATTACHMENTS};
@@ -396,27 +396,27 @@ class sf_rifleman {// sf rifleman
 class sf_rifleman_02: sf_rifleman {// sf rifleman 02
   vest[] = {SF_VEST_SNIPER};
   weapons[] = {SF_SNIPER};
-  magazines[] = {SF_SNIPER_MAG,BASE_GRENADES};
+  magazines[] = {SF_SNIPER_MAG,LOADOUT_GRENADES};
   linkedItems[] = {LINKED};
   attachments[] = {SF_SNIPER_ATTACHMENTS};
 };
 class sf_ar: sf_rifleman {// AR
   vest[] = {SF_VEST_AR};
   weapons[] = {SF_AR};
-  magazines[] = {SF_AR_MAG,SF_PISTOL_MAG,BASE_GRENADES};
+  magazines[] = {SF_AR_MAG,SF_PISTOL_MAG,LOADOUT_GRENADES};
   handguns[] = {SF_PISTOL};
   secondaryAttachments[] = {SF_PISTOL_ATTACHMENTS};
 };
 class sf_aar: sf_rifleman {// AAR
   weapons[] = {SF_CARBINE};
-  magazines[] = {SF_CARBINE_MAG,BASE_GRENADES};
+  magazines[] = {SF_CARBINE_MAG,LOADOUT_GRENADES};
   backpackItems[] += {SF_AR_MAG};
   linkedItems[] += {BINOS};
 };
 class sf_lat: sf_rifleman {// RAT
   backpack[] = {SF_BACKPACK};
   weapons[] = {SF_CARBINE};
-  magazines[] = {SF_CARBINE_MAG,SF_AT_MAG,BASE_GRENADES};
+  magazines[] = {SF_CARBINE_MAG,SF_AT_MAG,LOADOUT_GRENADES};
   launchers[] = {SF_AT};
   secondaryAttachments[] = {SF_AT_ATTACHMENTS};
 };

@@ -119,6 +119,51 @@ description = "Soviet VDV Airborne c. 1982-1985. Includes a complete SF class se
 //  init = "this addGoggles  ['gm_gc_army_facewear_schm41m'];"
 //  init = "this addGoggles selectRandom ['cwr3_b_facewear_scrimnet_scarf_olive','rhs_scarf','vn_o_acc_goggles_01','vn_none','CUP_G_TK_RoundGlasses_blk','CUP_TK_NeckScarf','vn_b_acc_towel_02'];"
 
+// ------------- Vehicle Pool -------------
+rallyObject = "cwr3_Flag_USSR";
+transportVehiclePool[] = {
+    "RHS_Ural_MSV_01",
+    "RHS_Ural_Open_MSV_01",
+    "CUP_O_UAZ_Unarmed_SLA",
+    "CUP_O_UAZ_Open_SLA"
+};
+armedSoftVehiclesPool[] = {
+    "CUP_O_UAZ_MG_SLA",
+    "CUP_O_UAZ_MG_SLA",
+    "CUP_O_UAZ_MG_SLA",
+    "CUP_O_UAZ_SPG9_SLA"
+};
+armoredVehiclePool[] = {
+    "rhs_btr80_msv",
+    "rhs_btr80_msv",
+    "rhs_bmd1p",
+    "rhs_bmd1p",
+    "rhs_bmd1p",
+    "rhs_bmd1pk",
+    "cwr3_o_brdm2",
+    "cwr3_o_brdm2_atgm",
+    "RHS_Ural_Zu23_VDV_01"
+};
+tankVehiclePool[] = {
+    "rhs_bmd2",
+    "rhs_bmd2",
+    "rhs_bmd2k",
+    "rhs_t72bb_tv"
+};
+heliVehiclePool[] = {
+    "RHS_Mi8mt_vdv",
+    "RHS_Mi8MTV3_heavy_vdv",
+    "RHS_Mi24V_vdv",
+    "RHS_Mi24P_vdv"
+};
+planeVehiclePool[] = {
+    "rhs_mig29s_vvsc",
+    "RHS_Su25SM_vvsc"
+};
+reinforcementTruck = "RHS_Ural_MSV_01"
+reinforcementArmed = "rhs_bmd1p"
+// ------------- End Vehicle Pool -------------
+
 class Car {
   TransportWeapons[] = {AT};
   TransportMagazines[] = {RIFLE_MAG,RIFLE_MAG,CARBINE_MAG,AR_MAG,AR_MAG,GLRIFLE_MAG_HE};
@@ -166,7 +211,7 @@ class sl: ftl {// SL
   backpack[] = {CAMO_BACKPACK_SL};
   handguns[] = {PISTOL};
   magazines[] += {PISTOL_MAG};
-  linkedItems[] = {LINKED,LEADER_LINKED,RANGE_FINDER};
+  linkedItems[] = {LINKED,LEADER_LINKED,BINOS};
   items[] += {RADIO_MR};
 };
 class coy: sl {// CO and DC
@@ -199,10 +244,10 @@ class sm: Fic_Soldier_Carbine {// Medic
   vest[] = {CAMO_VEST_MEDIC};
   magazines[] = {CARBINE_MAG,MEDIC_GRENADES};
   backpack[] = {CAMO_BACKPACK_MEDIC};
-  backpackItems[] = {MEDIC_MEDICAL};
+  backpackItems[] = {MEDIC_MEDICAL,"WBK_HeadLampItem"};
 };
 class Fic_Spotter: rifleman {
-  linkedItems[] += {RANGE_FINDER};
+  linkedItems[] += {BINOS};
 };
 class mmgg: ar {// MMG
   weapons[] = {MMG};
@@ -329,7 +374,7 @@ class rifleman_02: rifleman {// Rifleman 2
 };
 class rifleman_03: rifleman {// Rifleman 3
 };
-class rifleman_04: rifleman {// Rifleman 2
+class rifleman_04: rifleman {// Rifleman 4
 };
 class artl: sl {// Artillery Leader
   backpack[] = {CARRYALL};
@@ -527,7 +572,7 @@ class sf_sl: sf_ftl {// SL
   vest[] = {SF_VEST_SL};
   handguns[] = {SF_PISTOL};
   magazines[] += {SF_PISTOL_MAG};
-  linkedItems[] = {LINKED,LEADER_LINKED,RANGE_FINDER};
+  linkedItems[] = {LINKED,LEADER_LINKED,BINOS};
   items[] += {RADIO_MR};
   secondaryAttachments[] = {SF_PISTOL_ATTACHMENTS};
 };
