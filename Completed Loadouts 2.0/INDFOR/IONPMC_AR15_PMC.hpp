@@ -1,5 +1,5 @@
 author = "AChesheireCat";
-description = "Armaverse - ION PMC c.2020 (Last updated: 2025/03/17)";
+description = "Armaverse - ION PMC c.2020 (Last updated: 2025/06/27)";
 #include "undef.hpp" // Reset defines
 
 // ------------------- PASTE BELOW THIS LINE
@@ -10,7 +10,7 @@ description = "Armaverse - ION PMC c.2020 (Last updated: 2025/03/17)";
 #define CAMO_VEST "acp_Solid_Black_modern_west_lite_V_Crye_AVS_1_Solid_Black","acp_Solid_Black_modern_west_lite_V_Crye_AVS_1_1_Solid_Black","acp_Solid_Black_modern_west_lite_V_Crye_AVS_1_2_Solid_Black","acp_Solid_Black_modern_west_lite_V_Crye_AVS_1_3_Solid_Black"
 #define CAMO_BACKPACK "B_Battle_Belt_F"
 #define CARRYALL "cwr3_b_backpack_alice_black"
-#define CAMO_HEADGEAR "acp_Solid_Black_modern_west_lite_H_HelmetFASTMT_Headset_Solid_Black_F","acp_Solid_Black_core_lite_H_HelmetB_light_Solid_Black","CUP_H_OpsCore_Black","CUP_H_OpsCore_Black_SF","CUP_H_USArmy_Helmet_ECH2_Black","CUP_H_USArmy_Helmet_ECH1_Black"
+#define CAMO_HEADGEAR "acp_Solid_Black_modern_west_lite_H_HelmetFASTMT_Headset_Solid_Black_F","acp_Solid_Black_core_lite_H_HelmetB_light_Solid_Black","CUP_H_OpsCore_Black","CUP_H_OpsCore_Black_SF","CUP_H_USArmy_Helmet_ECH2_Black","CUP_H_USArmy_Helmet_ECH1_Black","acp_Solid_Black_modern_west_lite_H_HelmetFASTMT_Solid_Black_F","acp_Solid_Black_contact_lite_H_HelmetIA_Solid_Black","acp_Solid_Black_modern_east_lite_H_HelmetSpecter_headset_Solid_Black_F"
 #define CAMO_HEADGEAR_SPECIAL "H_tweed_Hat_fleece","H_tweed_Hat_fleece","H_tweed_Hat_fleece","H_Cap_blk_ION","H_Bandanna_gry","CUP_H_PMC_Cap_Back_EP_Grey","CUP_H_PMC_Cap_Grey","CUP_H_PMC_Cap_Back_EP_Tan","H_Cap_blk_CMMG","H_Cap_khaki_specops_UK","H_Cap_usblack"
 // Pilot Camo set
 #define CAMO_UNIFORM_PILOT CAMO_UNIFORM
@@ -37,7 +37,7 @@ description = "Armaverse - ION PMC c.2020 (Last updated: 2025/03/17)";
 #define GLRIFLE_MAG_FLARE "UGL_FlareYellow_F:4"
 #define GLRIFLE_MAG_ILLUM "CUP_1Rnd_StarFlare_White_M203:4"
 // Carbine
-#define CARBINE "rhs_weap_ak74m_zenitco01_b33","rhs_weap_ak105_zenitco01_b33","CUP_arifle_AK74M_railed_afg","CUP_arifle_AK105_railed"
+#define CARBINE "rhs_weap_ak74m_zenitco01_b33","rhs_weap_ak105_zenitco01_b33"
 #define CARBINE_MAG "CUP_30Rnd_545x39_AK12_M:7","CUP_30Rnd_TE1_Red_Tracer_545x39_AK74M_M:3"
 // AR
 #define AR "potato_lmg_LAMG_black"
@@ -115,7 +115,7 @@ description = "Armaverse - ION PMC c.2020 (Last updated: 2025/03/17)";
 #define CAMO_UNIFORM_SNIPER CAMO_UNIFORM
 
 #define ETOOL "ACE_EntrenchingTool"
-#define NVG 
+#define NVG "CUP_NVG_PVS14_WP"
 #define DEMO "DemoCharge_Remote_Mag"
 #define DEMOTOOL "ACE_Clacker"
 

@@ -6,10 +6,10 @@
 #define RADIO_LR "ACRE_PRC117F"
 
 // GEAR
-#define BASE_MEDICAL "ACE_elasticBandage:10","ACE_tourniquet:2","ACE_splint","potato_pkblister"
-#define BASE_MEDICAL_AI "ACE_elasticBandage:4","ACE_tourniquet:1"
-#define MEDIC_MEDICAL RADIO_MR,"ACE_elasticBandage:45","ACE_epinephrine:10","ACE_salineIV:4","ACE_salineIV_500:6","ACE_salineIV_250:8","ACE_morphine:16","ACE_tourniquet:6","ACE_splint:12","ACE_adenosine:10","potato_naloxone:10","ACE_painkillers"
-#define PL_MEDIC_MEDICAL RADIO_MR,"ACE_elasticBandage:50","ACE_epinephrine:10","ACE_salineIV:10","ACE_salineIV_500:10","ACE_salineIV_250:10","ACE_morphine:16","ACE_tourniquet:6","ACE_splint:12","ACE_adenosine:10","potato_naloxone:10","ACE_painkillers"
+#define BASE_MEDICAL "ACE_packingBandage:6","ACE_elasticBandage:4","ACE_tourniquet:2","ACE_splint","potato_pkblister"
+#define BASE_MEDICAL_AI "ACE_fieldDressing:4","ACE_tourniquet:1"
+#define MEDIC_MEDICAL RADIO_MR,"ACE_packingBandage:25","ACE_elasticBandage:15","ACE_epinephrine:10","ACE_salineIV:4","ACE_salineIV_500:6","ACE_salineIV_250:8","ACE_morphine:16","ACE_tourniquet:6","ACE_splint:12","ACE_adenosine:10","potato_naloxone:10","ACE_painkillers"
+#define PL_MEDIC_MEDICAL RADIO_MR,"ACE_packingBandage:30","ACE_elasticBandage:20","ACE_epinephrine:10","ACE_salineIV:10","ACE_salineIV_500:10","ACE_salineIV_250:10","ACE_morphine:16","ACE_tourniquet:6","ACE_splint:12","ACE_adenosine:10","potato_naloxone:10","ACE_painkillers"
 #define BASE_TOOLS RADIO_SR,"ACE_MapTools","ACE_IR_Strobe_item:2","ACE_Flashlight_XL50","ACE_CableTie:2"
 #define BASE_LEADER_TOOLS "ACE_microDAGR","acex_intelitems_notepad"
 #define BASE_LINKED "ItemMap","ItemCompass","ItemWatch"

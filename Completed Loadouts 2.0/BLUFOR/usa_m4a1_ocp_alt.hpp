@@ -455,7 +455,9 @@ class rifleman_02: rifleman {// Rifleman 2
 };
 class rifleman_03: rifleman {// Rifleman 3 - XM-29 Grenadier
   weapons[] = {XM29};
-  magazines[] = {RIFLE_MAG,XM29_MAG,BASE_GRENADES};
+  handguns[] = {PISTOL};
+  magazines[] = {XM29_MAG,PISTOL_MAG,BASE_GRENADES};
+  handgunAttachments[] = {PISTOL_OPTIC};
 };
 class rifleman_04: rifleman {// Rifleman 4 - Squad Designated Marksman
   weapons[] = {DMR};
